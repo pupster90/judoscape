@@ -1,14 +1,26 @@
 <html>
-    <head><script src="http://blog.js.cytoscape.org/public/demos/getting-started/cytoscape.js"></script></head>
+    <head>
+        <!--<script type='text/javascript' src='https://raw.githubusercontent.com/qiao/heap.js/master/lib/heap.js'></script>-->
+        <!--<script src="node_modules/lodash.debounce/index.js"></script>-->
+        <script src="node_modules/heap/lib/heap.js"></script>
+        <script src="http://blog.js.cytoscape.org/public/demos/getting-started/cytoscape.js"></script>
+    </head>
     
-
+    
+    <style>
+        #cy { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;} 
+    </style>
+    
+    
     <body>
-        <style> #cy { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;}</style>
         <div id="cy"></div>
     </body>
-    <!--<body><div id="cy" style="{ width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;}"></div></body>-->
 </html>
 
+<script>
+    var cy = cytoscape({ container: document.getElementById('cy') })
+</script>
+<!--
 <script> var cy = cytoscape({ container: document.getElementById('cy'), 
 layout: { name: 'cose' }, 
 style: [ { selector: 'node', style: { 'height': 20, 'width': 20, 'background-color': 'gray' } },
@@ -90,3 +102,4 @@ style: [ { selector: 'node', style: { 'height': 20, 'width': 20, 'background-col
 ]
 
  }); </script>
+-->
